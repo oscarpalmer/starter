@@ -1,6 +1,6 @@
-# Starter
+# 🏝&nbsp;&nbsp;Starter
 
-🏝&nbsp;&nbsp;A simple starter pack for “lo-fi” web development.
+A simple starter pack for “lo-fi” web development.
 
 ## License
 
