@@ -1,0 +1,66 @@
+body {
+  padding: 0 5vw;
+  margin: 5vw 0;
+}
+
+header[role=banner],
+main,
+footer[role=contentinfo] {
+  max-width: 32rem;
+  margin: 5vw auto;
+}
+
+header[role=banner] {
+  min-height: 1rem;
+}
+
+header p {
+  float: left;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+}
+
+nav li {
+  margin-left: 1rem;
+  float: left;
+}
+
+a[aria-current=page] {
+  font-style: italic;
+  text-decoration: none;
+}
+
+a[aria-current=page]:hover {
+  text-decoration: underline;
+}
+
+main > * + *,
+article > * + *,
+section > * + * {
+  margin: 1rem 0;
+}
+
+article {
+  margin: 5vw 0;
+}
+
+section {
+  margin: 2.5vw 0;
+}
+
+footer[role=contentinfo] {
+  padding-bottom: 4rem;
+  font-size: smaller;
+}
+
+p + p {
+  margin-top: -1rem;
+  text-indent: 1rem;
+}
+
+blockquote footer {
+  margin: 1rem 0 0 1rem;
+}
