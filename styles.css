@@ -3,10 +3,13 @@ body {
   margin: 5vw 0;
 }
 
+.visually-hidden {
+  background: white;
+}
+
 header[role=banner],
 main,
 footer[role=contentinfo] {
-  max-width: 32rem;
   margin: 5vw auto;
 }
 
@@ -52,13 +55,7 @@ section {
 }
 
 footer[role=contentinfo] {
-  padding-bottom: 4rem;
   font-size: smaller;
-}
-
-p + p {
-  margin-top: -1rem;
-  text-indent: 1rem;
 }
 
 blockquote footer {
