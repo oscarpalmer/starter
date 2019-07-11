@@ -102,19 +102,15 @@ video {
   vertical-align: middle;
 }
 
-blockquote,
-dl,
-ol,
-p,
-ul {
-  max-width: 32em;
-  max-width: 64ch;
+blockquote {
+  quotes: none;
 }
 
-blockquote,
-blockquote p,
-q {
-  quotes: none;
+dd,
+li,
+p {
+  max-width: 32em;
+  max-width: 64ch;
 }
 
 hr {
@@ -217,20 +213,12 @@ mark {
   color: #000;
 }
 
-q::before {
-  content: '\201C';
+q {
+  quotes: '\201C' '\201D';
 }
 
-q::after {
-  content: '\201D';
-}
-
-q q::before {
-  content: '\2018';
-}
-
-q q::after {
-  content: '\2019';
+q q {
+  quotes: '\2018' '\2019';
 }
 
 sub,
