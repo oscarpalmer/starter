@@ -125,13 +125,14 @@ img {
   border-style: none;
 }
 
-nav ul {
-  list-style: none;
-}
-
 ol,
 ul {
   padding-left: 1em;
+}
+
+nav ul {
+  padding-left: 0;
+  list-style: none;
 }
 
 pre {
