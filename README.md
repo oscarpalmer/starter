@@ -24,8 +24,6 @@ To check out the styleguide, download this repo and then open [`styleguide.html`
 - [`styleguide.html`](styleguide.html): a visual guide of elements and their default styling with this reset-file
 - [`styles.css`](styles.css): basic styles for when this repo is visited in a browser
 
-## Getting
-
 ## License
 
 [MIT licensed](LICENSE); you're free to do whatever you'd like with all this. Have fun!

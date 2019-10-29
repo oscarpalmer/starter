@@ -7,12 +7,13 @@
  * - minireset.css
  * - normalize.css.
  * - sanitize.css
+ * - hankchizljaw.com/wrote/a-modern-css-reset/
  *
- * Oscar Palmér, https://oscar.pm
- * ======================================== */
+ * Oscar Palmér, oscar.pm
+ * ================================================ */
 
 /* Basics
- * ======================================== */
+ * ================================================ */
 
 * {
   padding: 0;
@@ -29,16 +30,20 @@ html {
   overflow-y: scroll;
   font-size: 100%;
   line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-word;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
+  min-height: 100vh;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 /* HTML5
- * ======================================== */
+ * ================================================ */
 
 canvas,
 progress {
@@ -64,7 +69,7 @@ template {
 }
 
 /* Accessibility
- * ======================================== */
+ * ================================================ */
 
 .visually-hidden {
   width: 1px;
@@ -88,7 +93,7 @@ template {
 }
 
 /* Grouping content
- * ======================================== */
+ * ================================================ */
 
 audio,
 embed,
@@ -106,18 +111,11 @@ blockquote {
   quotes: none;
 }
 
-dd,
-li,
-p {
-  max-width: 32em;
-  max-width: 64ch;
-}
-
 hr {
   height: 0;
   box-sizing: content-box;
   overflow: visible;
-  border: .5px solid;
+  border: .125rem solid;
 }
 
 img {
@@ -125,13 +123,15 @@ img {
   border-style: none;
 }
 
-nav ul {
-  list-style: none;
+nav ul,
+ol[class],
+ul[class] {
+  list-style: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg"/%3E');
 }
 
-ol,
-ul {
-  padding-left: 1em;
+ol:not([class]),
+ul:not([class]) {
+  padding: 0 0 0 1em;
 }
 
 pre {
@@ -139,7 +139,7 @@ pre {
 }
 
 /* Text-level content
- * ======================================== */
+ * ================================================ */
 
 a,
 button,
@@ -205,7 +205,7 @@ h1 {
 kbd,
 td,
 th {
-  border: 1px solid;
+  border: .125rem solid;
 }
 
 mark {
@@ -223,7 +223,7 @@ q q {
 
 sub,
 sup {
-  font-size: 75%;
+  font-size: smaller;
   line-height: 1;
   position: relative;
 }
@@ -239,7 +239,7 @@ sup {
 }
 
 /* Forms
- * ======================================== */
+ * ================================================ */
 
 button,
 input,
@@ -266,10 +266,22 @@ textarea {
 }
 
 /* Tables
- * ======================================== */
+\* ================================================ */
 
 table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/* Remove animations and transition if requested
+\* ================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
