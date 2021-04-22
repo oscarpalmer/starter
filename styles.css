@@ -24,6 +24,7 @@ header p {
 
 nav ul {
   float: right;
+  list-style: none;
 }
 
 nav li {
